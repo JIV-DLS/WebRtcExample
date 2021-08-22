@@ -17,7 +17,7 @@ from gi.repository import GstSdp
 
 PIPELINE_DESC = '''
 webrtcbin name=sendrecv bundle-policy=max-bundle stun-server=stun://stun.l.google.com:19302
- uridecodebin uri=rtsp://user:password@192.168.110.220 ! videoconvert ! queue ! vp8enc deadline=1 ! rtpvp8pay !
+ uridecodebin uri=rtsp://user:password@adresse_camera ! videoconvert ! queue ! vp8enc deadline=1 ! rtpvp8pay !
  queue ! application/x-rtp,media=video,encoding-name=VP8,payload=97 ! sendrecv.
 '''
 
